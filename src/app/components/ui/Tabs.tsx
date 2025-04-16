@@ -11,7 +11,7 @@ interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
-  ({ className, defaultValue, value, onValueChange, children, ...props }, ref) => {
+  ({ className, defaultValue, value, children, ...props }, ref) => {
     const [selectedValue, setSelectedValue] = React.useState(value || defaultValue);
 
     React.useEffect(() => {
@@ -20,12 +20,12 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
       }
     }, [value]);
 
-    const handleValueChange = (newValue: string) => {
-      if (value === undefined) {
-        setSelectedValue(newValue);
-      }
-      onValueChange?.(newValue);
-    };
+    // const handleValueChange = (newValue: string) => {
+    //   if (value === undefined) {
+    //     setSelectedValue(newValue);
+    //   }
+    //   onValueChange?.(newValue);
+    // };
 
     return (
       <div
@@ -36,9 +36,9 @@ const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
       >
         {React.Children.map(children, (child) => {
           if (React.isValidElement(child)) {
-            return React.cloneElement(child as React.ReactElement<any>, {
-              selectedValue,
-              onValueChange: handleValueChange,
+            // Pass only props that exist on TabsContentProps
+            return React.cloneElement(child as React.ReactElement<TabsContentProps>, {
+              selectedValue
             });
           }
           return child;
@@ -69,7 +69,7 @@ const TabsList = React.forwardRef<HTMLDivElement, TabsListProps>(
       >
         {React.Children.map(children, (child) => {
           if (React.isValidElement(child)) {
-            return React.cloneElement(child as React.ReactElement<any>, {
+            return React.cloneElement(child as React.ReactElement<TabsTriggerProps>, {
               selectedValue,
               onValueChange,
             });

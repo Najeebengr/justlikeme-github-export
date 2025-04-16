@@ -1,3 +1,5 @@
+'use client';
+
 // src/app/dashboard/content/upload/page.tsx
 
 import React from 'react';
@@ -119,7 +121,7 @@ export default function ContentUploadPage() {
                   <h3 className="text-lg font-medium mb-4">Tips for good knowledge samples:</h3>
                   <ul className="list-disc pl-5 space-y-2 text-neutral-600">
                     <li>Include content that showcases your expertise and unique perspectives</li>
-                    <li>Upload articles, blog posts, books, or transcripts you've written</li>
+                    <li>Upload articles, blog posts, books, or transcripts you&apos;ve written</li>
                     <li>Include a variety of topics within your area of expertise</li>
                     <li>The more content you provide, the more knowledgeable your twin will be</li>
                     <li>Supported formats: PDF, DOCX, TXT (max 50MB per file)</li>

@@ -2,7 +2,6 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { cn } from '@/app/utils/cn';
 import { Button } from './Button';
 import { Avatar } from './Avatar';
 

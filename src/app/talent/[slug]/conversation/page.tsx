@@ -4,9 +4,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Button, Card, CardContent, CardHeader, CardTitle } from '@/app/components/ui';
 
-export default function TalentConversationPage({ params }: { params: { slug: string } }) {
+export default async function TalentConversationPage({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
   // This would normally fetch data based on the slug
-  const talentSlug = params.slug;
+  const { slug: talentSlug } = await params;
   
   return (
     <div className="bg-neutral-50 min-h-screen">
@@ -33,7 +37,7 @@ export default function TalentConversationPage({ params }: { params: { slug: str
                   <div className="flex justify-center">
                     <div className="bg-neutral-100 rounded-lg px-4 py-2 max-w-md">
                       <p className="text-sm text-neutral-600 text-center">
-                        You are now chatting with Dr. Jane Smith's digital twin. This conversation will be billed at $5.00 per minute.
+                        You are now chatting with Dr. Jane Smith&apos;s digital twin. This conversation will be billed at $5.00 per minute.
                       </p>
                     </div>
                   </div>
@@ -46,7 +50,7 @@ export default function TalentConversationPage({ params }: { params: { slug: str
                     <div className="bg-white rounded-lg border border-neutral-200 px-4 py-3 max-w-3xl">
                       <p className="font-medium text-neutral-900 mb-1">Dr. Jane Smith</p>
                       <p className="text-neutral-700">
-                        Hello! I'm Dr. Jane Smith's digital twin. I'm here to discuss neuroscience, brain health, cognitive enhancement, or any other topics related to my expertise. What would you like to talk about today?
+                        Hello! I&apos;m Dr. Jane Smith&apos;s digital twin. I&apos;m here to discuss neuroscience, brain health, cognitive enhancement, or any other topics related to my expertise. What would you like to talk about today?
                       </p>
                     </div>
                   </div>
@@ -55,7 +59,7 @@ export default function TalentConversationPage({ params }: { params: { slug: str
                   <div className="flex justify-end">
                     <div className="bg-primary-100 rounded-lg px-4 py-3 max-w-3xl">
                       <p className="text-primary-800">
-                        Hi Dr. Smith! I've been having trouble focusing while working from home. Do you have any science-backed tips for improving concentration?
+                        Hi Dr. Smith! I&apos;ve been having trouble focusing while working from home. Do you have any science-backed tips for improving concentration?
                       </p>
                     </div>
                   </div>
@@ -68,7 +72,7 @@ export default function TalentConversationPage({ params }: { params: { slug: str
                     <div className="bg-white rounded-lg border border-neutral-200 px-4 py-3 max-w-3xl">
                       <p className="font-medium text-neutral-900 mb-1">Dr. Jane Smith</p>
                       <p className="text-neutral-700 mb-3">
-                        That's a common challenge, especially with the increase in remote work. The good news is that neuroscience research has identified several effective strategies for improving focus and concentration. Here are some evidence-based approaches:
+                        That&apos;s a common challenge, especially with the increase in remote work. The good news is that neuroscience research has identified several effective strategies for improving focus and concentration. Here are some evidence-based approaches:
                       </p>
                       <ol className="list-decimal pl-5 space-y-2 text-neutral-700">
                         <li>
@@ -97,7 +101,7 @@ export default function TalentConversationPage({ params }: { params: { slug: str
                   <div className="flex justify-end">
                     <div className="bg-primary-100 rounded-lg px-4 py-3 max-w-3xl">
                       <p className="text-primary-800">
-                        The time blocking approach sounds interesting. Could you explain more about how that works with our brain's natural cycles?
+                        The time blocking approach sounds interesting. Could you explain more about how that works with our brain&apos;s natural cycles?
                       </p>
                     </div>
                   </div>
@@ -110,16 +114,16 @@ export default function TalentConversationPage({ params }: { params: { slug: str
                     <div className="bg-white rounded-lg border border-neutral-200 px-4 py-3 max-w-3xl">
                       <p className="font-medium text-neutral-900 mb-1">Dr. Jane Smith</p>
                       <p className="text-neutral-700">
-                        Great question about time blocking and our brain's natural cycles! Our brains operate on what neuroscientists call ultradian rhythms – natural cycles of high and low energy that typically last 90-120 minutes. Within these cycles, we experience about 25-30 minutes of peak focus before attention begins to naturally decline.
+                        Great question about time blocking and our brain&apos;s natural cycles! Our brains operate on what neuroscientists call ultradian rhythms – natural cycles of high and low energy that typically last 90-120 minutes. Within these cycles, we experience about 25-30 minutes of peak focus before attention begins to naturally decline.
                       </p>
                       <p className="mt-3 text-neutral-700">
-                        The Pomodoro Technique (25 minutes of work followed by a 5-minute break) aligns well with this natural rhythm. It's not just arbitrary timing – it's designed to work with your brain's natural capacity for sustained attention. During those 25 minutes, your prefrontal cortex – responsible for executive functions like focus – can maintain optimal performance.
+                        The Pomodoro Technique (25 minutes of work followed by a 5-minute break) aligns well with this natural rhythm. It&apos;s not just arbitrary timing – it&apos;s designed to work with your brain&apos;s natural capacity for sustained attention. During those 25 minutes, your prefrontal cortex – responsible for executive functions like focus – can maintain optimal performance.
                       </p>
                       <p className="mt-3 text-neutral-700">
-                        When you try to push beyond this natural limit without a break, you activate the brain's stress response. The resulting cortisol release actually impairs cognitive function and makes it harder to focus. The 5-minute break allows your brain to reset, reducing cognitive fatigue and preparing for the next focused session.
+                        When you try to push beyond this natural limit without a break, you activate the brain&apos;s stress response. The resulting cortisol release actually impairs cognitive function and makes it harder to focus. The 5-minute break allows your brain to reset, reducing cognitive fatigue and preparing for the next focused session.
                       </p>
                       <p className="mt-3 text-neutral-700">
-                        In my lab, we've observed that people who work with these natural rhythms rather than against them show improved performance, better memory consolidation, and report less mental fatigue at the end of the day.
+                        In my lab, we&apos;ve observed that people who work with these natural rhythms rather than against them show improved performance, better memory consolidation, and report less mental fatigue at the end of the day.
                       </p>
                       <p className="mt-3 text-neutral-700">
                         Would you like some practical tips for implementing this approach effectively?

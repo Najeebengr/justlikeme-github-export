@@ -4,9 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Button, Card, CardContent, CardHeader, CardTitle, Tabs, TabsList, TabsTrigger, TabsContent, Badge } from '@/app/components/ui';
 
-export default function TalentDetailPage({ params }: { params: { slug: string } }) {
+export default function TalentDetailPage() {
   // This would normally fetch data based on the slug
-  const talentSlug = params.slug;
+  // const talentSlug = params.slug;
   
   return (
     <div className="bg-white">
@@ -27,7 +27,7 @@ export default function TalentDetailPage({ params }: { params: { slug: string } 
               <div className="flex-grow">
                 <div className="flex flex-wrap items-center gap-2 mb-2">
                   <h1 className="text-3xl font-bold text-neutral-900">Dr. Jane Smith</h1>
-                  <Badge variant="primary">Featured</Badge>
+                  <Badge variant="secondary">Featured</Badge>
                 </div>
                 <p className="text-xl text-neutral-600 mb-4">Neuroscientist & Author</p>
                 
@@ -75,10 +75,10 @@ export default function TalentDetailPage({ params }: { params: { slug: string } 
                         As the director of the Cognitive Enhancement Lab at the University of California, Dr. Smith leads a team of researchers exploring the frontiers of brain plasticity and cognitive performance. Her groundbreaking work has been featured in leading scientific journals including Nature Neuroscience and The Journal of Cognitive Neuroscience.
                       </p>
                       <p className="mb-4">
-                        Beyond her academic work, Dr. Smith is passionate about making neuroscience accessible to everyone. Her books "The Adaptive Brain" and "Rewire Your Thinking" have sold over a million copies worldwide and been translated into 28 languages. She regularly appears on podcasts and television programs to discuss her research and its practical applications.
+                        Beyond her academic work, Dr. Smith is passionate about making neuroscience accessible to everyone. Her books &quot;The Adaptive Brain&quot; and &quot;Rewire Your Thinking&quot; have sold over a million copies worldwide and been translated into 28 languages. She regularly appears on podcasts and television programs to discuss her research and its practical applications.
                       </p>
                       <p>
-                        Dr. Smith's digital twin is trained on her extensive body of work, including her books, research papers, interviews, lectures, and podcast appearances. It can discuss a wide range of topics related to neuroscience, brain health, cognitive enhancement, and the practical applications of neuroscience research in everyday life.
+                        Dr. Smith&apos;s digital twin is trained on her extensive body of work, including her books, research papers, interviews, lectures, and podcast appearances. It can discuss a wide range of topics related to neuroscience, brain health, cognitive enhancement, and the practical applications of neuroscience research in everyday life.
                       </p>
                     </div>
                   </CardContent>
@@ -166,7 +166,7 @@ export default function TalentDetailPage({ params }: { params: { slug: string } 
                           </div>
                         </div>
                         <p className="text-neutral-600">
-                          Incredible experience! Dr. Smith's digital twin was able to explain complex neuroscience concepts in a way that was easy to understand. I had questions about improving my memory for exams, and the advice was practical and backed by research. It really felt like I was talking to the real Dr. Smith!
+                          Incredible experience! Dr. Smith&apos;s digital twin was able to explain complex neuroscience concepts in a way that was easy to understand. I had questions about improving my memory for exams, and the advice was practical and backed by research. It really felt like I was talking to the real Dr. Smith!
                         </p>
                       </div>
                       
@@ -189,7 +189,7 @@ export default function TalentDetailPage({ params }: { params: { slug: string } 
                           </div>
                         </div>
                         <p className="text-neutral-600">
-                          As someone who's read all of Dr. Smith's books, I was skeptical about how well an AI could capture her expertise. I was pleasantly surprised! The digital twin referenced specific parts of her research that were relevant to my questions about brain health and aging. The conversation was engaging and informative.
+                          As someone who&apos;s read all of Dr. Smith&apos;s books, I was skeptical about how well an AI could capture her expertise. I was pleasantly surprised! The digital twin referenced specific parts of her research that were relevant to my questions about brain health and aging. The conversation was engaging and informative.
                         </p>
                       </div>
                       
@@ -215,7 +215,7 @@ export default function TalentDetailPage({ params }: { params: { slug: string } 
                           </div>
                         </div>
                         <p className="text-neutral-600">
-                          Good conversation overall. The digital twin was knowledgeable about neuroscience topics and provided helpful insights on improving focus and attention. I'm giving 4 stars because there were a couple of times when the responses felt a bit generic. Still, it was worth the money and I'd use it again.
+                          Good conversation overall. The digital twin was knowledgeable about neuroscience topics and provided helpful insights on improving focus and attention. I&apos;m giving 4 stars because there were a couple of times when the responses felt a bit generic. Still, it was worth the money and I&apos;d use it again.
                         </p>
                       </div>
                     </div>
